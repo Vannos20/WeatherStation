@@ -1,15 +1,19 @@
 namespace Database
 {
-    public class Sensor
-    {
-        public int Id { get; set; }
-        public string Type { get; set; }
-        public string Name { get; set; }
-        public DateTime MeasurementDate { get; set; }
-        private static int counter = 0;
-        public Sensor()
+    public class Sensor
+    {
+        public int Id { get; init; }
+        public string Type { get; set; }
+        public string Name { get; set; }
+        public DateTime MeasurementDate { get; set; }
+        
+        
+        public Sensor(int id, string type, string name)
         {
-            counter++;
+            this.Id = id;
+            this.Type = type;
+            this.Name = name;
+            this.MeasurementDate = DateTime.Now; 
         }
-    }
+    }
 }
