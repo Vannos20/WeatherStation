@@ -1,16 +1,18 @@
-namespace Database
-{
-    public class User
-    {
-        
-        public int Id { get; init; } 
-        public string Name { get; set; } 
+using System.Diagnostics.Metrics;
 
-        
-        public User(string name, int id)
-        {
-            this.Id = id;
-            this.Name = name;
-        }
-    }
+namespace Database;
+public class User
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+
+    private static int counter;
+
+    public User(string name, int id)
+    {
+        Name = name;
+        Id = id;
+
+        counter++;
+    }
 }
