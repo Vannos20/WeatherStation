@@ -9,11 +9,5 @@ public class Sensor
     public DateTime MeasurementDate { get; set; }
     
 
-    private static int counter;
-    public Sensor()
-    {
-        counter++;
-    }
-
 
 }
